@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jersey Description</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background: linear-gradient(to right,  #f9f9fa, #a1c4ec);
+            color: #333;
+        }
+        .jersey-container {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+        .jersey-container:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .jersey-image {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+        }
+        .jersey-details {
+            padding-left: 20px;
+        }
+        .jersey-title {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        .jersey-description {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #666;
+        }
+        .jersey-size {
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+        .button {
+            padding: 12px 24px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .button.buy {
+            background-color: #28a745;
+        }
+        .button.buy:hover {
+            background-color: #218838;
+        }
+        .button.cart {
+            background-color: #ffc107;
+        }
+        .button.cart:hover {
+            background-color: #e0a800;
+        }
+        .button.details {
+            background-color: #17a2b8;
+        }
+        .button.details:hover {
+            background-color: #138496;
+        }
+    </style>
+</head>
+<body>
+    <div class="jersey-container">
+        <img src="voli1.png" alt="Jersey" class="jersey-image">
+        <div class="jersey-details">
+            <div class="jersey-title">Jersey Latihan club Vierte</div>
+            <div class="jersey-description">
+                Jersey ini terbuat dari bahan berkualitas tinggi dan sangat nyaman dipakai. Tersedia dalam berbagai ukuran.
+            </div>
+            <div class="jersey-size">
+                <label for="size">Ukuran:</label>
+                <select id="size" name="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <a href="#" class="button buy">Buy</a>
+                <a href="#" class="button cart">Add to Cart</a>
+                <a href="#" class="button details">View Details</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="jersey-container">
+        <img src="voli2.png" alt="Jersey" class="jersey-image">
+        <div class="jersey-details">
+            <div class="jersey-title">Jersey Team Esperion</div>
+            <div class="jersey-description">
+                Jersey dengan desain elegan dan bahan yang lembut. Cocok untuk segala kondisi.
+            </div>
+            <div class="jersey-size">
+                <label for="size">Ukuran:</label>
+                <select id="size" name="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <a href="#" class="button buy">Buy</a>
+                <a href="#" class="button cart">Add to Cart</a>
+                <a href="#" class="button details">View Details</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="jersey-container">
+        <img src="voli3.png" alt="Jersey" class="jersey-image">
+        <div class="jersey-details">
+            <div class="jersey-title">Jersey Team Cross Xerd</div>
+            <div class="jersey-description">
+                Jersey premium dengan ventilasi yang baik dan nyaman dipakai sepanjang hari.
+            </div>
+            <div class="jersey-size">
+                <label for="size">Ukuran:</label>
+                <select id="size" name="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <a href="#" class="button buy">Buy</a>
+                <a href="#" class="button cart">Add to Cart</a>
+                <a href="#" class="button details">View Details</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
