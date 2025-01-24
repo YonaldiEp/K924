@@ -26,7 +26,6 @@
 </head>
 
 <body>
-
     <!-- PROMO -->
     <div class="bg-blue-600 px-4 py-3 text-white">
         <p class="text-center text-sm font-medium">
@@ -40,9 +39,8 @@
     <header class="bg-white">
         <div class="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 lg:px-8">
             <div class="flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
-
                 <div class="flex items-center gap-4">
-                    <img src="../Assets/Logo.png" alt="Logo" class="w-24 h-24">
+                    <img src="logo.png" alt="Logo" class="w-24 h-24">
                     <div>
                         <a href="index.html" class="inline-block">
                             <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">YF Store</h1>
@@ -50,66 +48,54 @@
                         <p class="mt-1.5 text-xl text-gray-500">Jersey Store</p>
                     </div>
                 </div>
-
                 <div class="flex items-center gap-2 ml-auto">
-                    <a href="index.html">
-                        <button
-                            class="inline-block bg-white px-3 py-2 text-sm font-medium text-gray-900 transition hover:text-gray-700 focus:outline-none focus:ring">
-                            Home
-                        </button>
-                    </a>
-                    <a href="about.html">
-                        <button
-                            class="inline-block bg-white px-3 py-2 text-sm font-medium text-gray-900 transition hover:text-gray-700 focus:outline-none focus:ring">
-                            About
-                        </button>
-                    </a>
-                    <div class="relative inline-block text-left dropdown">
-                        <button
-                            class="inline-block bg-white px-3 py-2 text-sm font-medium text-gray-900 transition hover:text-gray-700 focus:outline-none focus:ring">
-                            Product
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline-block ml-2"
-                                viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
+                    <!-- Buttons -->
+                    <a href="index.html" class="px-3 py-2 text-sm text-gray-900 hover:text-gray-700">Home</a>
+                    <a href="about.html" class="px-3 py-2 text-sm text-gray-900 hover:text-gray-700">About</a>
+                    <div class="relative dropdown">
+                        <button class="px-3 py-2 text-sm text-gray-900 hover:text-gray-700">Product</button>
                         <div class="dropdown-content">
-                            <a href="produk1.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Volly</a>
-                            <a href="produk2.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Basket</a>
-                            <a href="produk3.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Football</a>
+                            <a href="produk1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Volly</a>
+                            <a href="produk2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Basket</a>
+                            <a href="produk3.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Football</a>
                         </div>
                     </div>
-                    <a href="signup.html">
-                        <button
-                            class="inline-block rounded bg-green-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-green-700 focus:outline-none focus:ring"
-                            type="button">
-                            Sign Up
-                        </button>
-                    </a>
-                    <a href="signin.html">
-                        <button
-                            class="inline-block rounded bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700 focus:outline-none focus:ring"
-                            type="button">
-                            Sign In
-                        </button>
-                    </a>
-                    <a href="cart.html" class="ml-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-4-8h16m0 0l-3 6h-9l4 8M5.4 5H20M9 21h6m-6 0h-.01M9 21a1 1 0 11-2 0m2 0a1 1 0 002 0m-2 0h6m0 0a1 1 0 102 0m-2 0a1 1 0 01-2 0" />
-                        </svg>
-                    </a>
+                    <a href="signup.html" class="rounded bg-green-600 px-5 py-2 text-sm text-white hover:bg-green-700">Sign Up</a>
+                    <a href="signin.html" class="rounded bg-blue-600 px-5 py-2 text-sm text-white hover:bg-blue-700">Sign In</a>
                 </div>
             </div>
         </div>
     </header>
     <!-- END NAVBAR -->
+
+    <!-- CAROUSEL -->
+    <div id="carousel" class="relative w-full max-w-6xl mx-auto mt-4">
+        <div class="relative overflow-hidden rounded-lg h-56 md:h-96">
+            <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="OIP.jpeg" alt="Volly" class="absolute block w-full h-full object-900">
+            </div>
+            <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="basket.jpg" alt="Basket" class="absolute block w-full h-full object-cover">
+            </div>
+            <div class="carousel-item hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="calcio3.jpg" alt="Football" class="absolute block w-full h-full object-cover">
+            </div>
+        </div>
+        <button class="absolute top-1/2 right-0 transform -translate-y-1/2 px-4 py-2 text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 focus:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 flex items-center justify-center" data-carousel-prev>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 16.293a1 1 0 010-1.414L15.586 11H3a1 1 0 110-2h12.586l-3.293-3.293a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+        </button>
+        <button class="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 focus:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 flex items-center justify-center" data-carousel-next>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.707 3.707a1 1 0 010 1.414L4.414 8H17a1 1 0 110 2H4.414l3.293 3.293a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div>
+    
+    
+    
+    <!-- END CAROUSEL -->
 
     <!-- CONTENT -->
     <section class="bg-white mt-0" style="min-height: 25vh; padding-top: 10vh;">
@@ -141,16 +127,41 @@
     </section>
     <!-- END CONTENT -->
 
+    <script>
+        const items = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
 
+        function showItem(index) {
+            items.forEach((item, i) => {
+                item.classList.toggle('hidden', i !== index);
+            });
+        }
+
+        document.querySelector('[data-carousel-next]').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            showItem(currentIndex);
+        });
+
+        document.querySelector('[data-carousel-prev]').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            showItem(currentIndex);
+        });
+
+        // Automatically move carousel
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % items.length;
+            showItem(currentIndex);
+        }, 5000); // Change image every 5 seconds
+
+        // Initialize
+        showItem(currentIndex);
+    </script>
 
     <!-- FOOTER -->
     <footer class="bg-white-50 mt-16">
         <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
-            <div class="sm:flex sm:items-center sm:justify-center">
-                <div class="flex justify-center text-teal-600 sm:justify-start"></div>
-                <p class="mt-4 text-center text-sm text-gray-500 lg:mt-0 lg:text-center">Copyright &copy; 2024 YF Store.
-                    All rights reserved.</p>
-            </div>
+            <p class="mt-4 text-center text-sm text-gray-500 lg:mt-0 lg:text-center">Copyright &copy; 2024 YF Store.
+                All rights reserved.</p>
         </div>
     </footer>
     <!-- END FOOTER -->
