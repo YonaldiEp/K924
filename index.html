@@ -21,6 +21,31 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .scale-up {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .scale-up:hover {
+            transform: scale(1.05);
+        }
     </style>
     <!-- END CSS -->
 </head>
@@ -55,13 +80,18 @@
                     <div class="relative dropdown">
                         <button class="px-3 py-2 text-sm text-gray-900 hover:text-gray-700">Product</button>
                         <div class="dropdown-content">
-                            <a href="produk1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Volly</a>
-                            <a href="produk2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Basket</a>
-                            <a href="produk3.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Football</a>
+                            <a href="produk1.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Volly</a>
+                            <a href="produk2.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Basket</a>
+                            <a href="produk3.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Football</a>
                         </div>
                     </div>
-                    <a href="signup.html" class="rounded bg-green-600 px-5 py-2 text-sm text-white hover:bg-green-700">Sign Up</a>
-                    <a href="signin.html" class="rounded bg-blue-600 px-5 py-2 text-sm text-white hover:bg-blue-700">Sign In</a>
+                    <a href="signup.html"
+                        class="rounded bg-green-600 px-5 py-2 text-sm text-white hover:bg-green-700">Sign Up</a>
+                    <a href="signin.html"
+                        class="rounded bg-blue-600 px-5 py-2 text-sm text-white hover:bg-blue-700">Sign In</a>
                 </div>
             </div>
         </div>
@@ -81,20 +111,28 @@
                 <img src="calcio3.jpg" alt="Football" class="absolute block w-full h-full object-cover">
             </div>
         </div>
-        <button class="absolute top-1/2 right-0 transform -translate-y-1/2 px-4 py-2 text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 focus:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 flex items-center justify-center" data-carousel-prev>
+        <button
+            class="absolute top-1/2 right-0 transform -translate-y-1/2 px-4 py-2 text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 focus:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 flex items-center justify-center"
+            data-carousel-prev>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M12.293 16.293a1 1 0 010-1.414L15.586 11H3a1 1 0 110-2h12.586l-3.293-3.293a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                <path fill-rule="evenodd"
+                    d="M12.293 16.293a1 1 0 010-1.414L15.586 11H3a1 1 0 110-2h12.586l-3.293-3.293a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd" />
             </svg>
         </button>
-        <button class="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 focus:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 flex items-center justify-center" data-carousel-next>
+        <button
+            class="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 focus:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 flex items-center justify-center"
+            data-carousel-next>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M7.707 3.707a1 1 0 010 1.414L4.414 8H17a1 1 0 110 2H4.414l3.293 3.293a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 0z" clip-rule="evenodd" />
+                <path fill-rule="evenodd"
+                    d="M7.707 3.707a1 1 0 010 1.414L4.414 8H17a1 1 0 110 2H4.414l3.293 3.293a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
             </svg>
         </button>
     </div>
-    
-    
-    
+
+
+
     <!-- END CAROUSEL -->
 
     <!-- CONTENT -->
@@ -126,6 +164,70 @@
         </div>
     </section>
     <!-- END CONTENT -->
+
+
+    <!-- PRODUK -->
+    <section>
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+            <header class="text-center fade-in">
+                <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Product Collection</h2>
+                <p class="mx-auto mt-4 max-w-md text-gray-500">
+                    Pilih Cabang olahraga yang sesuai
+                </p>
+            </header>
+
+            <div class="flex justify-center">
+                <ul class="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-3">
+                    <li class="fade-in">
+                        <a href="voli.html" class="group block overflow-hidden scale-up">
+                            <img src="voli.jpg" alt=""
+                                class="h-[350px] w-full object-800 transition duration-500 group-hover:scale-105 sm:h-[450px]" />
+                            <div class="relative bg-white pt-3">
+                                <h3 class="text-xl text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                                    Jersey Bola voli
+                                </h3>
+                                <p class="mt-2">
+                                    <span class="sr-only">Regular Price</span>
+                                    <span class="tracking-wider text-gray-900"></span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="fade-in">
+                        <a href="basket.html" class="group block overflow-hidden scale-up">
+                            <img src="baskeet.jpg" alt=""
+                                class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
+                            <div class="relative bg-white pt-3">
+                                <h3 class="text-xl text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                                    Jersey Bola Basket
+                                </h3>
+                                <p class="mt-2">
+                                    <span class="sr-only">Regular Price</span>
+                                    <span class="tracking-wider text-gray-900"></span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="fade-in">
+                        <a href="sepakbola.html" class="group block overflow-hidden scale-up">
+                            <img src="bolaa.jpg" alt=""
+                                class="h-[350px] w-full object-800 transition duration-500 group-hover:scale-105 sm:h-[450px]" />
+                            <div class="relative bg-white pt-3">
+                                <h3 class="text-xl text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                                    Jersey Sepak bola
+                                </h3>
+                                <p class="mt-2">
+                                    <span class="sr-only">Regular Price</span>
+                                    <span class="tracking-wider text-gray-900"></span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- END PRODUK -->
 
     <script>
         const items = document.querySelectorAll('.carousel-item');
