@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= esc($produk['nama']) ?> - Deskripsi Jersey Voli</title>
+    <title> Deskripsi Jersey Voli</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -93,29 +93,31 @@
 
 <body>
     <a href="<?= base_url('/dashboard') ?>" class="button dashboard">Kembali</a>
-    <div class="jersey-container">
-        <img src="<?= base_url('uploads/' . $produk['gambar']) ?>" alt="<?= esc($produk['nama']) ?>" class="jersey-image">
-        <div class="jersey-details">
-            <div class="jersey-title"><?= esc($produk['nama']) ?></div>
-            <div class="jersey-description"><?= esc($produk['deskripsi']) ?></div>
-            <div class="jersey-size">
-                <label for="size">Ukuran:</label>
-                <select id="size" name="size">
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                    <option value="XXL">XXL</option>
-                </select>
-            </div>
-            <div class="buttons">
-                <form action="<?= base_url('produk/addToCart/' . $produk['id']) ?>" method="post">
-                    <input type="hidden" name="ukuran" id="hidden_size" value="">
-                    <button type="submit" class="button cart">Tambah Ke Keranjang</button>
-                </form>
+    <?php foreach ($produks as $produk): ?>
+        <div class="jersey-container">
+            <img src="<?= base_url('uploads/' . $produk['gambar']) ?>" alt="" class="jersey-image">
+            <div class="jersey-details">
+                <div class="jersey-title"><?= esc($produk['nama']) ?></div>
+                <div class="jersey-description"><?= esc($produk['deskripsi']) ?></div>
+                <div class="jersey-size">
+                    <label for="size">Ukuran:</label>
+                    <select id="size" name="size">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <form action="<?= base_url('produk/addToCart/' . $produk['id']) ?>" method="post">
+                        <input type="hidden" name="ukuran" id="hidden_size" value="">
+                        <button type="submit" class="button cart">Tambah Ke Keranjang</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    <?php endforeach; ?>
 
     <script>
         document.querySelector('.button.cart').addEventListener('click', function() {

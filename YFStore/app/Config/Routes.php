@@ -30,7 +30,7 @@ $routes->get('admin/api/products', 'AdminController::apiGetProducts');
 
 
 // PRODUK
-$routes->get('produk/(:num)', 'ProdukController::view/$1');
+$routes->get('produk/(:num)', 'AdminController::produk/$1');
 $routes->post('produk/addToCart/(:num)', 'ProdukController::addToCart/$1');
 $routes->get('keranjang', 'KeranjangController::index');
 $routes->get('keranjang/delete/(:num)', 'KeranjangController::delete/$1');

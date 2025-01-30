@@ -11,7 +11,7 @@ class ProdukController extends Controller
     public function view($id = null)
     {
         $model = new ProdukModel();
-        $data['produk'] = $model->find($id);
+        $data['produk'] = $model->getAllProduk();
 
         if ($data['produk']) {
             $viewFile = 'produk/' . $id;
@@ -27,19 +27,20 @@ class ProdukController extends Controller
         $produkModel = new ProdukModel();
         $produk = $produkModel->find($produk_id);
 
-        $user_id = session()->get('id');
-        if (!$user_id) {
+        $id = session()->get('id');
+        if (!$id) {
             return redirect()->to('/login')->with('error', 'Anda harus login terlebih dahulu.');
         }
 
         if ($produk) {
             $ukuran = $this->request->getPost('ukuran');
             $keranjangModel->save([
-                'user_id' => $user_id,
-                'produk_id' => $produk_id,
-                'jumlah' => 1,
-                'total_harga' => $produk['harga'],
-                'ukuran' => $ukuran
+                'id' => $id,
+                'gambar' => $gambar,
+                // 'produk_id' => $produk_id,
+                // 'jumlah' => 1,
+                // 'total_harga' => $produk['harga'],
+                // 'ukuran' => $ukuran
             ]);
 
             return redirect()->to('/keranjang');

@@ -14,6 +14,13 @@ class AdminController extends Controller
         return view('admin/index', $data);
     }
 
+    public function produk()
+    {
+        $model = new ProdukModel();
+        $data['produks'] = $model->getAllProduk();
+        return view('produk/1', $data);
+    }
+
     public function create()
     {
         return view('admin/create');

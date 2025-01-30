@@ -38,7 +38,7 @@
                     <input type="hidden" name="user_id" value="<?= $id_pembeli; ?>">
                     <input type="hidden" name="total_amount" value="<?= $total_amount; ?>">
                     <input type="hidden" name="payment_status" value="Pending">
-                    <button type="button" @click="showModal = true" class="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">Konfirmasi Pembayaran</button>
+                    <button type="button" @click="showModal = true" class="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Konfirmasi Pembayaran</button>
                 </form>
             </div>
         </div>
