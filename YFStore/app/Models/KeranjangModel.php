@@ -8,5 +8,5 @@ class KeranjangModel extends Model
 {
     protected $table = 'keranjang';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['user_id', 'produk_id', 'jumlah', 'total_harga', 'ukuran'];
+    protected $allowedFields = ['user_id', 'produk_id', 'jumlah', 'total_harga', 'ukuran',];
 }

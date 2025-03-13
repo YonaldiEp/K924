@@ -90,7 +90,6 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
-            /* Mengurangi ruang kosong di atas daftar produk */
         }
     </style>
 </head>
@@ -114,6 +113,7 @@
                         <th>Harga</th>
                         <th>Gambar</th>
                         <th>Kategori</th>
+                        <th>Kelas</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -125,6 +125,7 @@
                             <td>Rp <?= number_format($produk['harga'], 2, ',', '.') ?></td>
                             <td><img src="<?= base_url('uploads/' . $produk['gambar']) ?>" alt="<?= $produk['nama'] ?>" width="100"></td>
                             <td><?= $produk['kategori'] ?></td>
+                            <td><?= $produk['kelas'] ?></td>
                             <td>
                                 <a href="<?= base_url('admin/delete/' . $produk['id']) ?>" class="btn-hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus produk ini?')">Hapus</a>
                             </td>

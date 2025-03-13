@@ -80,6 +80,10 @@
                 <label for="ukuran">Ukuran:</label>
                 <input type="text" id="ukuran" name="ukuran" required>
             </div>
+            <div class="form-group">
+                <label for="ukuran">Kelas:</label>
+                <input type="text" id="ukuran" name="ukuran" required>
+            </div>
             <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Tambah Produk</button>
         </form>
     </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Deskripsi Jersey Voli</title>
+    <title>Deskripsi Jersey Voli</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -59,6 +59,10 @@
             margin-bottom: 20px;
         }
 
+        .jersey-class {
+            margin-bottom: 20px;
+        }
+
         .buttons {
             display: flex;
             gap: 15px;
@@ -109,9 +113,17 @@
                         <option value="XXL">XXL</option>
                     </select>
                 </div>
+                <div class="jersey-class">
+                    <label for="class">Kelas:</label>
+                    <select id="class" name="class">
+                        <option value="biasa">Biasa</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
                 <div class="buttons">
                     <form action="<?= base_url('produk/addToCart/' . $produk['id']) ?>" method="post">
                         <input type="hidden" name="ukuran" id="hidden_size" value="">
+                        <input type="hidden" name="kelas" id="hidden_class" value="">
                         <button type="submit" class="button cart">Tambah Ke Keranjang</button>
                     </form>
                 </div>
@@ -122,7 +134,9 @@
     <script>
         document.querySelector('.button.cart').addEventListener('click', function() {
             var ukuran = document.getElementById('size').value;
+            var kelas = document.getElementById('class').value;
             document.querySelector('#hidden_size').value = ukuran;
+            document.querySelector('#hidden_class').value = kelas;
         });
     </script>
 </body>

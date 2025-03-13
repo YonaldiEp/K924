@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\ProdukModel;
-use App\Models\KeranjangModel; // Pastikan ini diimpor dengan benar
+use App\Models\KeranjangModel;
 use CodeIgniter\Controller;
 
 class ProdukController extends Controller
@@ -34,13 +34,15 @@ class ProdukController extends Controller
 
         if ($produk) {
             $ukuran = $this->request->getPost('ukuran');
+            $kelas = $this->request->getPost('kelas'); // Retrieve the class from the form data
+
             $keranjangModel->save([
                 'id' => $id,
-                'gambar' => $gambar,
-                // 'produk_id' => $produk_id,
-                // 'jumlah' => 1,
-                // 'total_harga' => $produk['harga'],
-                // 'ukuran' => $ukuran
+                'produk_id' => $produk_id,
+                'jumlah' => 1,
+                'total_harga' => $produk['harga'],
+                'ukuran' => $ukuran,
+                'kelas' => $kelas
             ]);
 
             return redirect()->to('/keranjang');
